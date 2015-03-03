@@ -4,7 +4,11 @@
 	<groupId>br.com.waiso.poc.pagseguro</groupId>
 	<artifactId>poc-pagseguro</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 	<name>poc-pagseguro</name>
 	
+	<modules>
+		<module>poc-pagseguro-view</module>
+		<module>poc-pagseguro-api</module>
+	</modules>
 </project>

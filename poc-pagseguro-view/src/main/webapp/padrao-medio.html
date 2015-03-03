@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>PoC - PagSeguro</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">PagSeguro</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Padr&atilde;o<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="padrao-basico.html">B&aacute;sico</a>
+							</li>
+							<li>
+								<a href="padrao-medio.html">M&eacute;dio</a>
+							</li>
+							<li>
+								<a href="padrao-avancado.html">Avan&ccedil;ado</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Lightbox<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="lightbox-basico.html">B&aacute;sico</a>
+							</li>
+							<li>
+								<a href="lightbox-avancado.html">Avan&ccedil;ado</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Checkout Transparente<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="checkout-avancado.html">Avan&ccedil;ado</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Outros<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="faq.html">Perguntas</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+		<!-- Page Content -->
+		<div class="container">
+			<!-- Page Heading/Breadcrumbs -->
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">Básico</h1>
+					<ol class="breadcrumb">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li class="active">Padrão</li>
+						<li class="active">M&eacute;dio</li>
+					</ol>
+				</div>
+			</div>
+			<!-- /.row -->
+	
+			<div class="row">
+				<!-- Blog Entries Column -->
+				<div class="col-md-8">
+					<a href="https://www.apple.com/br/iphone-6/">
+						<img class="img-responsive img-hover" src="images/iphone6.png" alt="">
+					</a>
+					<div class="caption">
+						<div class="row"> 
+							<h4 class="pull-left">
+								<a href="#">Iphone 6</a>
+							</h4>
+							<h4 class="pull-right">R$ 3.999,99</h4>
+						</div>
+						<p>O iPhone 6 não é só maior. Ele é grande em todos os sentidos. 
+						Maior, porém muito mais fino. Mais poderoso, consumindo muito menos energia. 
+						A superfície lisa de metal se integra perfeitamente à tela Retina HD. 
+						Um design contínuo onde hardware e software funcionam em perfeita harmonia, 
+						criando uma geração de iPhone que é grande em tudo.
+						</p>
+						<div class="ratings">
+	                        <p class="pull-right">12 reviews</p>
+	                        <p>
+	                            <span class="glyphicon glyphicon-star"></span>
+	                            <span class="glyphicon glyphicon-star"></span>
+	                            <span class="glyphicon glyphicon-star"></span>
+	                            <span class="glyphicon glyphicon-star"></span>
+	                            <span class="glyphicon glyphicon-star-empty"></span>
+	                        </p>
+	                    </div>
+	                    
+	                    <!-- Declaração do formulário -->  
+						<form method="post" target="pagseguro"  action="https://pagseguro.uol.com.br/v2/checkout/payment.html">  
+					          
+					        <!-- Campos obrigatórios -->  
+					        <input name="receiverEmail" type="hidden" value="waiso.ti@gmail.com">
+					        <input name="currency" type="hidden" value="BRL">
+					  
+					        <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
+					        <input name="itemId1" type="hidden" value="0001">  
+					        <input name="itemDescription1" type="hidden" value="Iphone 6">  
+					         <input name="itemAmount1" type="hidden" value="3999.99">  
+					        <input name="itemQuantity1" type="hidden" value="1">  
+					        <input name="itemWeight1" type="hidden" value="1000">  
+					        
+					       <!--  <input name="itemId2" type="hidden" value="0002">  
+					        <input name="itemDescription2" type="hidden" value="Iphone 6">  
+					        <input name="itemAmount2" type="hidden" value="25600.00">  
+					        <input name="itemQuantity2" type="hidden" value="2">  
+					        <input name="itemWeight2" type="hidden" value="750">   -->
+					  
+					        <!-- Código de referência do pagamento no seu sistema (opcional) -->  
+					        <input name="reference" type="hidden" value="REF1234">  
+					          
+					        <!-- Informações de frete (opcionais) -->  
+					        <input name="shippingType" type="hidden" value="1">  
+					        <input name="shippingAddressPostalCode" type="hidden" value="01452002">  
+					        <input name="shippingAddressStreet" type="hidden" value="Av. Brig. Faria Lima">  
+					        <input name="shippingAddressNumber" type="hidden" value="1384">  
+					        <input name="shippingAddressComplement" type="hidden" value="5o andar">  
+					        <input name="shippingAddressDistrict" type="hidden" value="Jardim Paulistano">  
+					        <input name="shippingAddressCity" type="hidden" value="Sao Paulo">  
+					        <input name="shippingAddressState" type="hidden" value="SP">  
+					        <input name="shippingAddressCountry" type="hidden" value="BRA">  
+					  
+					        <!-- Dados do comprador (opcionais) -->  
+					        <input name="senderName" type="hidden" value="Fabiano Rodrigues">  
+					        <input name="senderAreaCode" type="hidden" value="11">  
+					        <input name="senderPhone" type="hidden" value="56273440">  
+					        <input name="senderEmail" type="hidden" value="fabiano@waiso.com.br">  
+					  
+					        <!-- submit do form (obrigatório) -->  
+					        <input alt="Pague com PagSeguro" name="submit"  type="image"  src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-pagar.gif"/>  
+						</form> 
+	                    
+						<!-- <a class="btn btn-primary" href="#">Comprar</a> -->
+					</div>
+	
+					<hr>
+					
+					<a href="http://www.waiso.com.br/">
+						<img class="img-responsive img-hover" src="images/java.png" alt="">
+					</a>
+					<div class="caption">
+						<div class="row"> 
+							<h4 class="pull-left">
+								<a href="#">Academia Java</a>
+							</h4>
+							<h4 class="pull-right">R$ 199,99</h4>
+						</div>
+						<p>Essa formação inclui Lógica de Programação, os fundamentos de SQL e linguagem Java, 
+						para que você desenvolva aplicações com uma das linguagens mais usadas atualmente.
+						</p>
+						<div class="ratings">
+	                        <p class="pull-right">12 reviews</p>
+	                        <p>
+	                            <span class="glyphicon glyphicon-star"></span>
+	                            <span class="glyphicon glyphicon-star"></span>
+	                            <span class="glyphicon glyphicon-star"></span>
+	                            <span class="glyphicon glyphicon-star"></span>
+	                            <span class="glyphicon glyphicon-star-empty"></span>
+	                        </p>
+	                    </div>
+	                    
+	                    <!-- Declaração do formulário -->  
+						<form method="post" target="pagseguro"  action="https://pagseguro.uol.com.br/v2/checkout/payment.html">  
+					          
+					        <!-- Campos obrigatórios -->  
+					        <input name="receiverEmail" type="hidden" value="suporte@lojamodelo.com.br">  
+					        <input name="currency" type="hidden" value="BRL">  
+					  
+					        <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
+					        <input name="itemId1" type="hidden" value="0001">
+					        <input name="itemDescription1" type="hidden" value="Notebook Prata">
+					        <input name="itemAmount1" type="hidden" value="24300.00">
+					        <input name="itemQuantity1" type="hidden" value="1">
+					        <input name="itemWeight1" type="hidden" value="1000">
+					        <input name="itemId2" type="hidden" value="0002">
+					        <input name="itemDescription2" type="hidden" value="Notebook Rosa">
+					        <input name="itemAmount2" type="hidden" value="25600.00">
+					        <input name="itemQuantity2" type="hidden" value="2">
+					        <input name="itemWeight2" type="hidden" value="750">
+					  
+					        <!-- Código de referência do pagamento no seu sistema (opcional) -->  
+					        <input name="reference" type="hidden" value="REF1234">
+					          
+					        <!-- Informações de frete (opcionais) -->  
+					        <input name="shippingType" type="hidden" value="1">
+					        <input name="shippingAddressPostalCode" type="hidden" value="01452002">
+					        <input name="shippingAddressStreet" type="hidden" value="Av. Brig. Faria Lima">  
+					        <input name="shippingAddressNumber" type="hidden" value="1384">  
+					        <input name="shippingAddressComplement" type="hidden" value="5o andar">  
+					        <input name="shippingAddressDistrict" type="hidden" value="Jardim Paulistano">  
+					        <input name="shippingAddressCity" type="hidden" value="Sao Paulo">  
+					        <input name="shippingAddressState" type="hidden" value="SP">  
+					        <input name="shippingAddressCountry" type="hidden" value="BRA">  
+					  
+					        <!-- Dados do comprador (opcionais) -->  
+					        <input name="senderName" type="hidden" value="José Comprador">  
+					        <input name="senderAreaCode" type="hidden" value="11">  
+					        <input name="senderPhone" type="hidden" value="56273440">  
+					        <input name="senderEmail" type="hidden" value="comprador@uol.com.br">  
+					  
+					        <!-- submit do form (obrigatório) -->  
+					        <input alt="Pague com PagSeguro" name="submit"  type="image"  src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-pagar.gif"/>  
+					          
+						</form> 
+	                    
+						<!-- <a class="btn btn-primary" href="#">Comprar</a> -->
+					</div>
+	
+					<hr>
+	
+					<!-- Pager -->
+					<ul class="pager">
+						<li class="previous">
+							<a href="#">&larr; Anterior</a>
+						</li>
+						<li class="next">
+							<a href="#">Próximo &rarr;</a>
+						</li>
+					</ul>
+	
+				</div>
+	
+				<!-- Blog Sidebar Widgets Column -->
+				<div class="col-md-4">
+	
+					<!-- Blog Search Well -->
+					<div class="well">
+						<h4>Pesquisar</h4>
+						<div class="input-group">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</span>
+						</div>
+						<!-- /.input-group -->
+					</div>
+	
+					<!-- Blog Categories Well -->
+					<div class="well">
+						<h4>Categorias</h4>
+						<div class="row">
+							<div class="col-lg-6">
+								<ul class="list-unstyled">
+									<li>
+										<a href="#">Categoria</a>
+									</li>
+									<li>
+										<a href="#">Categoria</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /.col-lg-6 -->
+							<div class="col-lg-6">
+								<ul class="list-unstyled">
+									<li>
+										<a href="#">Categoria</a>
+									</li>
+									<li>
+										<a href="#">Categoria</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /.col-lg-6 -->
+						</div>
+						<!-- /.row -->
+					</div>
+				</div>
+	
+			</div>
+			<!-- /.row -->
+			<hr>
+			<!-- Footer -->
+			<footer>
+				<div class="row">
+					<div class="col-lg-12">
+						<p>Copyright &copy; Waiso 2015</p>
+					</div>
+				</div>
+			</footer>
+	
+		</div>
+		<!-- /.container -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
